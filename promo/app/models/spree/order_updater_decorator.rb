@@ -9,6 +9,7 @@ Spree::OrderUpdater.class_eval do
         adjustment.update_attribute_without_callbacks(:eligible, false)
       end
     end
-    alias_method_chain :update_adjustments, :promotion_limiting
+    # NOTE: REMOVED PROMOTION LIMITING TO ALLOW FOR MORE THAN ONE PROMOTION PER ORDER
+    # alias_method_chain :update_adjustments, :promotion_limiting
   end
 end
